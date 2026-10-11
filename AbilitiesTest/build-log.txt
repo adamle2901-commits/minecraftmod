@@ -1,0 +1,42 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.8/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Java: 17.0.17, JVM: 17.0.17+10 (Eclipse Adoptium), Arch: amd64
+
+> Task :compileJava
+[19:13:44] [main/INFO]: Writing debug log file accesstransform.log
+[19:13:44] [main/INFO]: Access Transformer processor running version 8.2.14
+[19:13:44] [main/INFO]: Command line arguments [--inJar, C:\Users\adamd\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.4.26\forge-1.20.1-47.4.26-injected.jar, --outJar, C:\Users\adamd\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.4.26_mapped_official_1.20.1\forge-1.20.1-47.4.26_mapped_official_1.20.1.jar, --logFile, accesstransform.log, --atFile, C:\Users\adamd\OneDrive\Desktop\AbilitiesTest\build\_atJar_4\parent_at.cfg]
+[19:13:44] [main/INFO]: Reading from C:\Users\adamd\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.4.26\forge-1.20.1-47.4.26-injected.jar
+[19:13:44] [main/INFO]: Writing to C:\Users\adamd\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.4.26_mapped_official_1.20.1\forge-1.20.1-47.4.26_mapped_official_1.20.1.jar
+[19:13:44] [main/INFO]: Transformer file C:\Users\adamd\OneDrive\Desktop\AbilitiesTest\build\_atJar_4\parent_at.cfg
+[19:13:44] [main/WARN]: Found existing output jar C:\Users\adamd\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.4.26_mapped_official_1.20.1\forge-1.20.1-47.4.26_mapped_official_1.20.1.jar, overwriting
+[19:13:52] [main/INFO]: JAR transformation complete C:\Users\adamd\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.4.26_mapped_official_1.20.1\forge-1.20.1-47.4.26_mapped_official_1.20.1.jar
+C:\Users\adamd\OneDrive\Desktop\AbilitiesTest\src\main\java\com\abilitiestest\Config.java:49: warning: [removal] ResourceLocation(String) in ResourceLocation has been deprecated and marked for removal
+        return obj instanceof final String itemName && ForgeRegistries.ITEMS.containsKey(new ResourceLocation(itemName));
+                                                                                         ^
+C:\Users\adamd\OneDrive\Desktop\AbilitiesTest\src\main\java\com\abilitiestest\Config.java:61: warning: [removal] ResourceLocation(String) in ResourceLocation has been deprecated and marked for removal
+                .map(itemName -> ForgeRegistries.ITEMS.getValue(new ResourceLocation(itemName)))
+                                                                ^
+2 warnings
+
+> Task :processResources
+> Task :classes
+> Task :jar
+> Task :downloadMcpConfig
+> Task :extractSrg
+> Task :createMcpToSrg
+> Task :reobfJar
+> Task :jarJar SKIPPED
+> Task :reobfJarJar SKIPPED
+> Task :assemble
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test NO-SOURCE
+> Task :check UP-TO-DATE
+> Task :build
+
+BUILD SUCCESSFUL in 1m 35s
+7 actionable tasks: 7 executed
